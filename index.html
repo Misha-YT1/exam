@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Команда</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    .team {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .team__title {
+      text-align: center;
+      margin: 0 0 30px;
+    }
+
+    /* Мобілка: 1 колонка <768px */
+    .team__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    /* Планшет: 2 колонки 768px – 1199px */
+    @media (min-width: 768px) {
+      .team__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ПК: 4 колонки ≥1200px */
+    @media (min-width: 1200px) {
+      .team__grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .team__card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .team__card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .team__info {
+      padding: 15px;
+    }
+
+    .team__name {
+      margin: 0 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .team__position {
+      margin: 0;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <section class="team">
+    <h2 class="team__title">Команда</h2>
+
+    <div class="team__grid">
+      <article class="team__card">
+        <img src="https://placehold.co/300x300" alt="Михайло Шевчук">
+        <div class="team__info">
+          <h3 class="team__name">Михайло Шевчук</h3>
+          <p class="team__position">Директор</p>
+        </div>
+      </article>
+
+      <article class="team__card">
+        <img src="https://placehold.co/300x300" alt="Анастасія Бойко">
+        <div class="team__info">
+          <h3 class="team__name">Анастасія Бойко</h3>
+          <p class="team__position">Дизайнер</p>
+        </div>
+      </article>
+
+      <article class="team__card">
+        <img src="https://placehold.co/300x300" alt="Іван Куленко">
+        <div class="team__info">
+          <h3 class="team__name">Іван Куленко</h3>
+          <p class="team__position">Frontend-розробник</p>
+        </div>
+      </article>
+
+      <article class="team__card">
+        <img src="https://placehold.co/300x300" alt="Ілля Сампан">
+        <div class="team__info">
+          <h3 class="team__name">Ілля Сампан</h3>
+          <p class="team__position">Backend-розробник</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>
